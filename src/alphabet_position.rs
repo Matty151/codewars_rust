@@ -1,27 +1,18 @@
+const ALPHABET: &str = "abcdefghijklmnopqrstuvwxyz";
+
 pub fn main() {
     println!("{}", alphabet_position("The sunset sets at twelve o' clock."));
 }
 
 fn alphabet_position(text: &str) -> String {
-    let alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".chars();
-    let mut alphabet_mut = alphabet.clone();
-    let mut result = String::new();
+    let lower_text = text.to_lowercase();
+    let mut result = Vec::new();
 
-    for char in text.chars() {
-        let index = alphabet_mut.position(|letter| letter == char);
-        alphabet_mut = alphabet.clone();
-
-        if index != None {
-            let mut index = index.unwrap() + 1;
-
-            if index > 26 {
-                index -= 26;
-            }
-
-            result.push_str(&index.to_string());
-            result.push_str(" ");
+    for char in lower_text.chars() {
+        if let Some(index) = ALPHABET.chars().position(|letter| letter == char) {
+            result.push((index + 1).to_string());
         }
     }
 
-    result.trim_end().to_string()
+    result.join(" ")
 }
