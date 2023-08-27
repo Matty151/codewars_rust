@@ -1,3 +1,5 @@
+mod split_strings;
+
 fn main() {
-    println!("Hello, world!");
+    split_strings::main();
 }
