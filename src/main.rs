@@ -1,5 +1,5 @@
-mod split_strings;
+mod alphabet_position;
 
 fn main() {
-    split_strings::main();
+    alphabet_position::main();
 }
