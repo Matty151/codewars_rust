@@ -1,5 +1,5 @@
-mod tower_builder;
+mod kata_6;
 
 fn main() {
-    tower_builder::main();
+    kata_6::tower_builder::main();
 }
