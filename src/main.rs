@@ -1,5 +1,5 @@
-mod kata_6;
+mod kata_5;
 
 fn main() {
-    kata_6::human_readable_time::main();
+    kata_5::string_incrementer::main();
 }
