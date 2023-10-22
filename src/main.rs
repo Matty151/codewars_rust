@@ -1,5 +1,5 @@
-mod kata_5;
+mod kata_6;
 
 fn main() {
-    kata_5::string_incrementer::main();
+    kata_6::camel_case::main();
 }
